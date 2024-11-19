@@ -1,0 +1,1 @@
+ D:\\Flutter\ Apps\\food_delivery_app\\.dart_tool\\flutter_build\\23a47591b557c3a46e20d3a0a1549952\\native_assets.yaml: 
