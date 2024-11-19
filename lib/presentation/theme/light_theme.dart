@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/presentation/theme/utilities/app_colors.dart';
-import 'package:get/get.dart';
 
 ThemeData lightTheme() {
   return ThemeData(

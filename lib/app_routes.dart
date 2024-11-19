@@ -1,0 +1,19 @@
+
+export 'package:food_delivery_app/presentation/ui/screens/user_screens/bottom_nav_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/forgot_password_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/reset_password_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/verification_code_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/congrats_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/payment_method_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/set_loaction_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/upload_photo_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/upload_photo_screen_2.dart';
+export 'package:food_delivery_app/presentation/theme/dark_theme.dart';
+export 'package:food_delivery_app/presentation/theme/light_theme.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/bio_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/login_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/on_board_screen1.dart';
+export 'package:food_delivery_app/presentation/ui/screens/on_board_screen2.dart';
+export 'package:food_delivery_app/presentation/ui/screens/auth_screens/sign_up_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/splash_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/featured_screen/resturants_screen.dart';

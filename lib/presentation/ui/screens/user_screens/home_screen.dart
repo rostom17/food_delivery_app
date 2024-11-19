@@ -24,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
             child: Column(
               children: [
+                const SizedBox(height: 10,),
                 _titleSection(),
                 const SizedBox(height: 20),
                 _searchBarSection(),
