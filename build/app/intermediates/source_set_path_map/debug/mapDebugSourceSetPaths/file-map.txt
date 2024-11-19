@@ -1,0 +1,29 @@
+com.example.food_delivery_app-jetified-savedstate-1.2.1-0 C:\Users\rosto\.gradle\caches\8.10.2\transforms\0453b9f3f5b92d0646f202685cdc76e5\transformed\jetified-savedstate-1.2.1\res
+com.example.food_delivery_app-jetified-activity-1.9.2-1 C:\Users\rosto\.gradle\caches\8.10.2\transforms\1b40eb36a0ac2569aaea79a509bb1b8b\transformed\jetified-activity-1.9.2\res
+com.example.food_delivery_app-jetified-profileinstaller-1.3.1-2 C:\Users\rosto\.gradle\caches\8.10.2\transforms\274b32dc5d18dac4ac96254aa4739718\transformed\jetified-profileinstaller-1.3.1\res
+com.example.food_delivery_app-jetified-lifecycle-process-2.7.0-3 C:\Users\rosto\.gradle\caches\8.10.2\transforms\27b1788326e0bbec1e49a38b571d888e\transformed\jetified-lifecycle-process-2.7.0\res
+com.example.food_delivery_app-fragment-1.7.1-4 C:\Users\rosto\.gradle\caches\8.10.2\transforms\41de59ab1a48a67cc7742f55863c191b\transformed\fragment-1.7.1\res
+com.example.food_delivery_app-jetified-lifecycle-viewmodel-savedstate-2.7.0-5 C:\Users\rosto\.gradle\caches\8.10.2\transforms\563c95ba6e5c8047cddce1718973be0f\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.example.food_delivery_app-lifecycle-livedata-core-2.7.0-6 C:\Users\rosto\.gradle\caches\8.10.2\transforms\5fd4afcd6b2b0875da7029586e3e3f8e\transformed\lifecycle-livedata-core-2.7.0\res
+com.example.food_delivery_app-core-1.13.1-7 C:\Users\rosto\.gradle\caches\8.10.2\transforms\6ed8ea106e42b0291de4a114cba06d52\transformed\core-1.13.1\res
+com.example.food_delivery_app-jetified-core-ktx-1.13.1-8 C:\Users\rosto\.gradle\caches\8.10.2\transforms\7a45ed3db13ac7cb0664986bb3038f7b\transformed\jetified-core-ktx-1.13.1\res
+com.example.food_delivery_app-jetified-lifecycle-livedata-core-ktx-2.7.0-9 C:\Users\rosto\.gradle\caches\8.10.2\transforms\7c43143ed476b129d7d3f1f47ae1e502\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.example.food_delivery_app-lifecycle-runtime-2.7.0-10 C:\Users\rosto\.gradle\caches\8.10.2\transforms\8720b1ab47866eea7a583d3c6cddc6a4\transformed\lifecycle-runtime-2.7.0\res
+com.example.food_delivery_app-jetified-tracing-1.2.0-11 C:\Users\rosto\.gradle\caches\8.10.2\transforms\a472470606db67c953f452cab349b207\transformed\jetified-tracing-1.2.0\res
+com.example.food_delivery_app-jetified-annotation-experimental-1.4.0-12 C:\Users\rosto\.gradle\caches\8.10.2\transforms\ac217390405f609caa18ff09d9f6fe8b\transformed\jetified-annotation-experimental-1.4.0\res
+com.example.food_delivery_app-jetified-window-1.2.0-13 C:\Users\rosto\.gradle\caches\8.10.2\transforms\c361ee2e94118012ea99f6296f5ad32d\transformed\jetified-window-1.2.0\res
+com.example.food_delivery_app-jetified-startup-runtime-1.1.1-14 C:\Users\rosto\.gradle\caches\8.10.2\transforms\ccbda882cf74d854b3257bc92cab2d69\transformed\jetified-startup-runtime-1.1.1\res
+com.example.food_delivery_app-core-runtime-2.2.0-15 C:\Users\rosto\.gradle\caches\8.10.2\transforms\ccc3e9d9e0efc35772d4a591f10d8d7d\transformed\core-runtime-2.2.0\res
+com.example.food_delivery_app-lifecycle-viewmodel-2.7.0-16 C:\Users\rosto\.gradle\caches\8.10.2\transforms\ce92bfbf1f72c95a0603b48f838e1545\transformed\lifecycle-viewmodel-2.7.0\res
+com.example.food_delivery_app-jetified-window-java-1.2.0-17 C:\Users\rosto\.gradle\caches\8.10.2\transforms\d6857b2f29d20b2a5bf44f0107159b23\transformed\jetified-window-java-1.2.0\res
+com.example.food_delivery_app-lifecycle-livedata-2.7.0-18 C:\Users\rosto\.gradle\caches\8.10.2\transforms\e8a286d49eaccb7db4c55d86c391a104\transformed\lifecycle-livedata-2.7.0\res
+com.example.food_delivery_app-jetified-core-1.0.0-19 C:\Users\rosto\.gradle\caches\8.10.2\transforms\fba9f0a9296e37c2fbc0238d52175a81\transformed\jetified-core-1.0.0\res
+com.example.food_delivery_app-debug-20 D:\Flutter Apps\food_delivery_app\android\app\src\debug\res
+com.example.food_delivery_app-main-21 D:\Flutter Apps\food_delivery_app\android\app\src\main\res
+com.example.food_delivery_app-pngs-22 D:\Flutter Apps\food_delivery_app\build\app\generated\res\pngs\debug
+com.example.food_delivery_app-resValues-23 D:\Flutter Apps\food_delivery_app\build\app\generated\res\resValues\debug
+com.example.food_delivery_app-packageDebugResources-24 D:\Flutter Apps\food_delivery_app\build\app\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.food_delivery_app-packageDebugResources-25 D:\Flutter Apps\food_delivery_app\build\app\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.food_delivery_app-debug-26 D:\Flutter Apps\food_delivery_app\build\app\intermediates\merged_res\debug\mergeDebugResources
+com.example.food_delivery_app-debug-27 D:\Flutter Apps\food_delivery_app\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug\packageDebugResources
+com.example.food_delivery_app-debug-28 D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\packaged_res\debug\packageDebugResources

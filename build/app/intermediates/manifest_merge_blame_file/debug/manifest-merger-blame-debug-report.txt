@@ -88,78 +88,118 @@
 74            android:name="flutterEmbedding"
 75            android:value="2" />
 76
-77        <uses-library
-77-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
-78            android:name="androidx.window.extensions"
-78-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
-79            android:required="false" />
-79-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
-80        <uses-library
-80-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
-81            android:name="androidx.window.sidecar"
-81-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
-82            android:required="false" />
-82-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
-83
-84        <provider
-84-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
-85            android:name="androidx.startup.InitializationProvider"
-85-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
-86            android:authorities="com.example.food_delivery_app.androidx-startup"
-86-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
-87            android:exported="false" >
-87-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
-88            <meta-data
-88-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
-89                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-89-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
-90                android:value="androidx.startup" />
-90-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
-91            <meta-data
-91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-92                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-93                android:value="androidx.startup" />
-93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-94        </provider>
-95
-96        <receiver
-96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-97            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-98            android:directBootAware="false"
-98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-99            android:enabled="true"
-99-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-100            android:exported="true"
-100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-101            android:permission="android.permission.DUMP" >
-101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-102            <intent-filter>
-102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-103                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-104            </intent-filter>
-105            <intent-filter>
-105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-106                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-107            </intent-filter>
-108            <intent-filter>
-108-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-109                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-109-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-109-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-110            </intent-filter>
-111            <intent-filter>
-111-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-112                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-113            </intent-filter>
-114        </receiver>
-115    </application>
-116
-117</manifest>
+77        <provider
+77-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-19:20
+78            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+78-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-82
+79            android:authorities="com.example.food_delivery_app.flutter.image_provider"
+79-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-74
+80            android:exported="false"
+80-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-37
+81            android:grantUriPermissions="true" >
+81-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-47
+82            <meta-data
+82-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-18:75
+83                android:name="android.support.FILE_PROVIDER_PATHS"
+83-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-67
+84                android:resource="@xml/flutter_image_picker_file_paths" />
+84-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:18:17-72
+85        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+86        <service
+86-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-33:19
+87            android:name="com.google.android.gms.metadata.ModuleDependencies"
+87-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-78
+88            android:enabled="false"
+88-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-36
+89            android:exported="false" >
+89-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+90            <intent-filter>
+90-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-28:29
+91                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+91-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-94
+91-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-91
+92            </intent-filter>
+93
+94            <meta-data
+94-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:36
+95                android:name="photopicker_activity:0:required"
+95-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-63
+96                android:value="" />
+96-->[:image_picker_android] D:\Flutter Apps\food_delivery_app\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:32:17-33
+97        </service>
+98
+99        <uses-library
+99-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+100            android:name="androidx.window.extensions"
+100-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+101            android:required="false" />
+101-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+102        <uses-library
+102-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+103            android:name="androidx.window.sidecar"
+103-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+104            android:required="false" />
+104-->[androidx.window:window:1.2.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\127b4ff70bd4b5869db2f483840aa402\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+105
+106        <provider
+106-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+107            android:name="androidx.startup.InitializationProvider"
+107-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+108            android:authorities="com.example.food_delivery_app.androidx-startup"
+108-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+109            android:exported="false" >
+109-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+110            <meta-data
+110-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+111                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+111-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+112                android:value="androidx.startup" />
+112-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\rosto\.gradle\caches\8.10.2\transforms\55a8730f51e70253beb0651572e71dfd\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+113            <meta-data
+113-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+114                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+114-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+115                android:value="androidx.startup" />
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+116        </provider>
+117
+118        <receiver
+118-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+119            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+120            android:directBootAware="false"
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+121            android:enabled="true"
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+122            android:exported="true"
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+123            android:permission="android.permission.DUMP" >
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+124            <intent-filter>
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+125                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+126            </intent-filter>
+127            <intent-filter>
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+128                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+129            </intent-filter>
+130            <intent-filter>
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+131                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+132            </intent-filter>
+133            <intent-filter>
+133-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+134                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\rosto\.gradle\caches\8.10.2\transforms\b695b7acd022c7c34888312469556725\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+135            </intent-filter>
+136        </receiver>
+137    </application>
+138
+139</manifest>

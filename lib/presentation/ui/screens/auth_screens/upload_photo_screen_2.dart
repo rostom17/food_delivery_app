@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/presentation/state_holders/auth_controller/sign_up_controller.dart';
 import 'package:food_delivery_app/presentation/ui/app_constants/image_paths.dart';
 import 'package:food_delivery_app/presentation/ui/widgets/background_pattern.dart';
 import 'package:get/get.dart';
@@ -11,6 +12,7 @@ class UploadPhotoScreen2 extends StatefulWidget {
 }
 
 class _UploadPhotoScreen2State extends State<UploadPhotoScreen2> {
+  final _controller = Get.find<SignUpController>();
   @override
   Widget build(BuildContext context) {
     final myTheme = MediaQuery.of(context).platformBrightness;
@@ -70,7 +72,7 @@ class _UploadPhotoScreen2State extends State<UploadPhotoScreen2> {
                       decoration: BoxDecoration(
                         color: Colors.orange,
                         borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(image: AssetImage(ImagePaths.visaLogo))
+                        image: DecorationImage(image: FileImage(_controller.userPhoto),),
                       ),
                     ),
                   ),

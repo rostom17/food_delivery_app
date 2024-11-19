@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/presentation/state_holders/auth_controller/sign_up_controller.dart';
 import 'package:food_delivery_app/presentation/ui/app_constants/image_paths.dart';
 import 'package:food_delivery_app/presentation/ui/widgets/background_pattern.dart';
 import 'package:get/get.dart';
@@ -11,6 +12,17 @@ class PaymentMethodScreen extends StatefulWidget {
 }
 
 class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
+  final SignUpController _signUpController = Get.find<SignUpController>();
+
+  void onTapNextButton() {
+    if(_signUpController.selectedPaymentMethod != -1) {
+      Get.toNamed('/uploadPhoto');
+    }
+    else {
+      Get.snackbar('Please Choose a Payment Method','');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final myTheme = MediaQuery.of(context).platformBrightness;
@@ -62,23 +74,21 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  _buildCard(Image.asset(ImagePaths.paypalLogo)),
+                  _buildCard(Image.asset(ImagePaths.paypalLogo), 0),
                   const SizedBox(
                     height: 10,
                   ),
-                  _buildCard(Image.asset(ImagePaths.visaLogo)),
+                  _buildCard(Image.asset(ImagePaths.visaLogo), 1),
                   const SizedBox(
                     height: 10,
                   ),
-                  _buildCard(Image.asset(ImagePaths.masterCardLogo)),
+                  _buildCard(Image.asset(ImagePaths.masterCardLogo), 2),
 
                   SizedBox(height: Get.height * .33),
                   Align(
                     alignment: Alignment.bottomCenter,
                     child: IconButton(
-                      onPressed: () {
-                        Get.toNamed('/uploadPhoto');
-                      },
+                      onPressed: onTapNextButton,
                       icon: Image.asset(ImagePaths.nextButton),
                     ),
                   ),
@@ -91,19 +101,28 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
     );
   }
 
-  Card _buildCard(Image img) {
-    return Card(
-      child: Container(
-        width: double.maxFinite,
-        height: 85,
-        child: Center(
-          child: Container(
-            height: 70,
-            width: 100,
-            child: img,
+  Widget _buildCard(Image img, int index) {
+    return GetBuilder<SignUpController>(
+      builder: (controller) {
+        return InkWell(
+          onTap: ()=> controller.setPaymentMethod(index),
+          child: Card(
+            elevation: 0,
+            color: index == controller.selectedPaymentMethod ? Colors.green : null,
+            child: SizedBox(
+              width: double.maxFinite,
+              height: 85,
+              child: Center(
+                child: SizedBox(
+                  height: 70,
+                  width: 100,
+                  child: img,
+                ),
+              ),
+            ),
           ),
-        ),
-      ),
+        );
+      }
     );
   }
 }

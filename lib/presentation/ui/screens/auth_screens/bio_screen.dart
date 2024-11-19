@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/presentation/state_holders/auth_controller/sign_up_controller.dart';
 import 'package:food_delivery_app/presentation/ui/app_constants/image_paths.dart';
 import 'package:food_delivery_app/presentation/ui/widgets/background_pattern.dart';
 import 'package:food_delivery_app/presentation/ui/widgets/text_field_widget.dart';
@@ -12,10 +13,21 @@ class BioScreen extends StatefulWidget {
 }
 
 class _BioScreenState extends State<BioScreen> {
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final SignUpController _signUpController = Get.find<SignUpController>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _firstNameController = TextEditingController();
   final TextEditingController _lastNameController = TextEditingController();
   final TextEditingController _mobileNumberController = TextEditingController();
+
+  void onTapNextButton() {
+    if (_formKey.currentState!.validate()) {
+      _signUpController.updateBio(
+          firstName: _firstNameController.text.trim(),
+          lastName: _lastNameController.text.trim(),
+          mobile: _mobileNumberController.text.trim());
+      Get.toNamed('/paymentScreen');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,23 +44,7 @@ class _BioScreenState extends State<BioScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    InkWell(
-                      onTap: (){
-                        Get.back();
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.only(top: 10,bottom: 10, right: 8, left: 18),
-                        decoration: BoxDecoration(
-                          color: myTheme == Brightness.light ? Colors.orange.shade50 : Colors.brown.shade900,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: const Icon(
-                          Icons.arrow_back_ios,
-                          color: Colors.orange,
-                          size: 26,
-                        ),
-                      ),
-                    ),
+                    _goBackButton(myTheme),
                     const SizedBox(
                       height: 20,
                     ),
@@ -79,9 +75,7 @@ class _BioScreenState extends State<BioScreen> {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: IconButton(
-                        onPressed: () {
-                          Get.toNamed('/paymentScreen');
-                        },
+                        onPressed: onTapNextButton,
                         icon: Image.asset(ImagePaths.nextButton),
                       ),
                     ),
@@ -90,6 +84,28 @@ class _BioScreenState extends State<BioScreen> {
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  InkWell _goBackButton(Brightness myTheme) {
+    return InkWell(
+      onTap: () {
+        Get.back();
+      },
+      child: Container(
+        padding: const EdgeInsets.only(top: 10, bottom: 10, right: 8, left: 18),
+        decoration: BoxDecoration(
+          color: myTheme == Brightness.light
+              ? Colors.orange.shade50
+              : Colors.brown.shade900,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: const Icon(
+          Icons.arrow_back_ios,
+          color: Colors.orange,
+          size: 26,
         ),
       ),
     );

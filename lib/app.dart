@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/presentation/state_holders/controller_bindings.dart';
 import 'package:get/get.dart';
 
 import 'package:food_delivery_app/app_routes.dart';
@@ -35,6 +36,8 @@ class FoodNinja extends StatelessWidget {
 
       theme: lightTheme(),
       darkTheme: darkTheme(),
+
+      initialBinding: ControllerBindings(),
 
 
     );
