@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   SizedBox _itemSection() {
     return SizedBox(
-      height: 120,
+      height: 100,
       width: double.maxFinite,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,

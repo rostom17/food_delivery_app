@@ -56,6 +56,7 @@ ThemeData lightTheme() {
         ),
       ),
     ),
+    
     navigationBarTheme:  NavigationBarThemeData(
       //backgroundColor: Colors.grey.withOpacity(.2),
       backgroundColor: AppColors.offWhileColor,

@@ -64,4 +64,36 @@ class DummyData {
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-2tuLGjtex92lAjBwmG2i8P8Zxa_8Dz1MEg&s'
     },
   ];
+  static List favouriteItems = [
+    {
+      'name': "Ham Burger",
+      'price': 13.5,
+      'imageLink':
+          'https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg',
+    },
+    {
+      'name': "Biriyani",
+      'price': 49.5,
+      'imageLink':
+          'https://healux.in/wp-content/uploads/2020/11/ChickenBiryani.jpg',
+    },
+    {
+      'name': "Noodles",
+      'price': 15.00,
+      'imageLink':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRj4fbDzlSwNqWoBrAIR5tG2DH7S2u4I9qTg&s',
+    },
+    {
+      'name': "Mutton",
+      'price': 26.00,
+      'imageLink':
+          'https://eastindianrecipes.net/wp-content/uploads/2022/11/Mutton-Curry-Country-Captain1.jpg',
+    },
+    {
+      'name': "Pasta",
+      'price': 9.99,
+      'imageLink':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2paowiODEqEOJ082fLEWgrlBjvBlGd2GrQ&s',
+    },
+  ];
 }

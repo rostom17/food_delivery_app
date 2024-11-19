@@ -55,6 +55,7 @@ ThemeData darkTheme() {
         ),
       ),
     ),
+    
 
     navigationBarTheme:  NavigationBarThemeData(
       backgroundColor: AppColors.darkBottomNavigationBarColor,
@@ -66,5 +67,8 @@ ThemeData darkTheme() {
       labelTextStyle: const WidgetStatePropertyAll(
           TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
     ),
+    iconTheme: const IconThemeData(
+      color: Colors.greenAccent
+    )
   );
 }
