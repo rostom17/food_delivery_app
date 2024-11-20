@@ -11,55 +11,77 @@ class DummyData {
     'https://images.saymedia-content.com/.image/t_share/MTc2MjcyOTIxMTM5MjkxMzA5/fast-food-restaurant-logos-and-their-hidden-meanings.jpg',
   ];
 
+  // 
   static const menuItems = [
-    {
-      'name': "Ham Burger",
-      'price': 13.5,
-      'imageLink':
-          'https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg',
-    },
-    {
-      'name': "Biriyani",
-      'price': 49.5,
-      'imageLink':
-          'https://healux.in/wp-content/uploads/2020/11/ChickenBiryani.jpg',
-    },
-    {
-      'name': "Noodles",
-      'price': 15.00,
-      'imageLink':
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRj4fbDzlSwNqWoBrAIR5tG2DH7S2u4I9qTg&s',
-    },
-    {
-      'name': "Mutton",
-      'price': 26.00,
-      'imageLink':
-          'https://eastindianrecipes.net/wp-content/uploads/2022/11/Mutton-Curry-Country-Captain1.jpg',
-    },
-    {
-      'name': "Pasta",
-      'price': 9.99,
-      'imageLink':
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2paowiODEqEOJ082fLEWgrlBjvBlGd2GrQ&s',
-    },
-  ];
+  {
+    'id': 1,
+    'name': "Ham Burger",
+    'price': 13.5,
+    'description': "A delicious hamburger with melted cheese and fresh veggies.",
+    'restaurantName': "Burger Delight",
+    'ratings': 4.5,
+    'imageLink':
+        'https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg',
+  },
+  {
+    'id': 2,
+    'name': "Biriyani",
+    'price': 49.5,
+    'description': "Authentic Indian biriyani cooked with fragrant spices.",
+    'restaurantName': "Spice Villa",
+    'ratings': 4.8,
+    'imageLink':
+        'https://healux.in/wp-content/uploads/2020/11/ChickenBiryani.jpg',
+  },
+  {
+    'id': 3,
+    'name': "Noodles",
+    'price': 15.00,
+    'description': "Stir-fried noodles with veggies and choice of protein.",
+    'restaurantName': "Asian Wok",
+    'ratings': 4.3,
+    'imageLink':
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRj4fbDzlSwNqWoBrAIR5tG2DH7S2u4I9qTg&s',
+  },
+  {
+    'id': 4,
+    'name': "Mutton",
+    'price': 26.00,
+    'description': "Tender mutton curry with aromatic spices.",
+    'restaurantName': "Royal Feast",
+    'ratings': 4.6,
+    'imageLink':
+        'https://eastindianrecipes.net/wp-content/uploads/2022/11/Mutton-Curry-Country-Captain1.jpg',
+  },
+  {
+    'id': 5,
+    'name': "Pasta",
+    'price': 9.99,
+    'description': "Creamy pasta served with a side of garlic bread.",
+    'restaurantName': "Italiano Bistro",
+    'ratings': 4.2,
+    'imageLink':
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2paowiODEqEOJ082fLEWgrlBjvBlGd2GrQ&s',
+  },
+];
+
 
   static const messages = [
     {
       'name': "Iron Man",
-      'message': "I love you 3000",
+      'message': "Donut Was good",
       'image':
           "https://cdn.britannica.com/49/182849-050-4C7FE34F/scene-Iron-Man.jpg"
     },
     {
       'name': "Batman",
-      'message': "I am Rich",
+      'message': "Rotten Pizza",
       'image':
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH3RSvuAcclnPc4412V8kNkKDZdPvWjvUmyg&s"
     },
     {
       'name': "Spider Man",
-      'message': "With Great Power Comes great Responsibility",
+      'message': "Pasta was not bad at all",
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-2tuLGjtex92lAjBwmG2i8P8Zxa_8Dz1MEg&s'
     },

@@ -17,3 +17,4 @@ export 'package:food_delivery_app/presentation/ui/screens/on_board_screen2.dart'
 export 'package:food_delivery_app/presentation/ui/screens/auth_screens/sign_up_screen.dart';
 export 'package:food_delivery_app/presentation/ui/screens/splash_screen.dart';
 export 'package:food_delivery_app/presentation/ui/screens/featured_screen/resturants_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/featured_screen/food_item_screen.dart';

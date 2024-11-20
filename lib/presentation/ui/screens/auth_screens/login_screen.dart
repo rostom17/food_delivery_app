@@ -23,14 +23,17 @@ class _LoginScreenState extends State<LoginScreen> {
     if (_formKey.currentState!.validate()) {
       bool isSuccess = await _loginController.loginRequest(
           _emailController.text, _passwordController.text);
+      Get.offAllNamed('/bottomNavScreen');
       if (isSuccess && mounted) {
-        Get.offAllNamed('/bottomNavScreen');
+        // Get.offAllNamed('/bottomNavScreen');
       } else {
-        Get.snackbar("Please Enter this to Login or SignUp",
-            "mail: abcd@gmail.com\npass: 1234",
-            colorText: Colors.black,
-            duration: const Duration(seconds: 3),
-            backgroundColor: Colors.white);
+        // if (mounted) {
+        //   Get.snackbar("Please Enter this to Login or SignUp",
+        //       "mail: abcd@gmail.com\npass: 1234",
+        //       colorText: Colors.black,
+        //       duration: const Duration(seconds: 3),
+        //       backgroundColor: Colors.white);
+        // }
       }
     }
   }
@@ -151,26 +154,26 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget _loginButton(double screenHeight) {
-    return GetBuilder<LoginController>(
-      builder: (controller) {
-        return Visibility(
-          visible: !controller.loginRequestInProgress,
-          replacement: const Center(child: CircularProgressIndicator(),),
-          child: IconButton(
-            onPressed: _onPressedLoginButton,
-            icon: SizedBox(
-              height: screenHeight * .072,
-              width: Get.width * .38,
-              child: Image.asset(
-                ImagePaths.loginButton,
-                fit: BoxFit.fill,
-              ),
+    return GetBuilder<LoginController>(builder: (controller) {
+      return Visibility(
+        visible: !controller.loginRequestInProgress,
+        replacement: const Center(
+          child: CircularProgressIndicator(),
+        ),
+        child: IconButton(
+          onPressed: _onPressedLoginButton,
+          icon: SizedBox(
+            height: screenHeight * .072,
+            width: Get.width * .38,
+            child: Image.asset(
+              ImagePaths.loginButton,
+              fit: BoxFit.fill,
             ),
-            highlightColor: Colors.transparent,
           ),
-        );
-      }
-    );
+          highlightColor: Colors.transparent,
+        ),
+      );
+    });
   }
 
   Row _loginViaGoogleFacebook(

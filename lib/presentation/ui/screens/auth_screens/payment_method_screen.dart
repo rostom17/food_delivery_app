@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'package:food_delivery_app/presentation/ui/widgets/widgets.dart';
 import 'package:food_delivery_app/presentation/state_holders/auth_controller/sign_up_controller.dart';
 import 'package:food_delivery_app/presentation/ui/app_constants/image_paths.dart';
-import 'package:food_delivery_app/presentation/ui/widgets/background_pattern.dart';
-import 'package:get/get.dart';
 
 class PaymentMethodScreen extends StatefulWidget {
   const PaymentMethodScreen({super.key});
@@ -37,26 +38,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  InkWell(
-                    onTap: () {
-                      Get.back();
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.only(
-                          top: 10, bottom: 10, right: 8, left: 18),
-                      decoration: BoxDecoration(
-                        color: myTheme == Brightness.light
-                            ? Colors.orange.shade50
-                            : Colors.brown.shade900,
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: const Icon(
-                        Icons.arrow_back_ios,
-                        color: Colors.orange,
-                        size: 26,
-                      ),
-                    ),
-                  ),
+                  TopCornerGoBackButtonWidget(myTheme: myTheme),
                   const SizedBox(
                     height: 20,
                   ),

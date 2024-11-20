@@ -4,3 +4,4 @@ export 'package:food_delivery_app/presentation/ui/widgets/featured_product_widge
 export 'package:food_delivery_app/presentation/ui/widgets/menu_card_widget.dart';
 export 'package:food_delivery_app/presentation/ui/widgets/restaurant_card_widget.dart';
 export 'package:food_delivery_app/presentation/ui/widgets/message_card_widget.dart';
+export 'package:food_delivery_app/presentation/ui/widgets/top_corner_go_back_button.dart';

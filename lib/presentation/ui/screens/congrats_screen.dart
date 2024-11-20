@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:get/get.dart';
@@ -120,15 +119,11 @@ class _CongratsScreenState extends State<CongratsScreen> {
     );
   }
 
-  void _onPressedIconButton () {
-    if(widget.myArguments[2] == 'reset') {
-      if(mounted) {
-        Get.offNamedUntil('/login', (Route<dynamic> route) => false);
-      }
+  void _onPressedIconButton() {
+    if (widget.myArguments[2] == 'reset') {
+      Get.offNamedUntil('/login', (Route<dynamic> route) => false);
     } else {
-      if(mounted) {
-        Get.offNamedUntil('/bottomNav', (Route<dynamic> route) => false);
-      }
+      Get.offNamedUntil('/bottomNavScreen', (Route<dynamic> route) => false);
     }
   }
 }

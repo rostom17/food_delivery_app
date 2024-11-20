@@ -1,41 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/presentation/ui/app_constants/dummy_data.dart';
+import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final myThemeMode = MediaQuery.of(context).platformBrightness;
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
-            expandedHeight: 350,
-            //pinned: true,
-            backgroundColor: Colors.transparent,
-            flexibleSpace: FlexibleSpaceBar(
-              background: Image.network(
-                'https://static.wikia.nocookie.net/kungfupanda/images/7/73/KFP3-promo-po4.jpg/revision/latest?cb=20150726165358',
-                fit: BoxFit.fill,
-              ),
-            ),
-            bottom: PreferredSize(
-              preferredSize: const Size.fromHeight(0),
-              child: Container(
-                height: 32,
-                alignment: Alignment.center,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(32),
-                    topRight: Radius.circular(32),
-                  ),
-                ),
-              ),
-            ),
-            leading: const Icon(Icons.arrow_back),
-            leadingWidth: 80,
-          ),
+          _sliverAppBar(myThemeMode),
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 28),
@@ -45,7 +21,7 @@ class ProfileScreen extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "Dummy Name",
+                        "Mr Panda",
                         style: Theme.of(context).textTheme.titleLarge,
                       ),
                       const Spacer(),
@@ -107,6 +83,34 @@ class ProfileScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  SliverAppBar _sliverAppBar(Brightness myThemeMode) {
+    return SliverAppBar(
+          expandedHeight: 350,
+          backgroundColor: Colors.transparent,
+          flexibleSpace: FlexibleSpaceBar(
+            background: Image.network(
+              'https://static.wikia.nocookie.net/kungfupanda/images/7/73/KFP3-promo-po4.jpg/revision/latest?cb=20150726165358',
+              fit: BoxFit.fill,
+            ),
+          ),
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(0),
+            child: Container(
+              height: 32,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: myThemeMode == Brightness.light ? Colors.white : Colors.black,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(32),
+                  topRight: Radius.circular(32),
+                ),
+              ),
+            ),
+          ),
+          
+        );
   }
 
   List<Widget> _favouriteSection(BuildContext context) {

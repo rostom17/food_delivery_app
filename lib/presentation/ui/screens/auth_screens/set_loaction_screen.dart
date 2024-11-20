@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/presentation/ui/app_constants/image_paths.dart';
-import 'package:food_delivery_app/presentation/ui/widgets/background_pattern.dart';
 import 'package:get/get.dart';
+
+import 'package:food_delivery_app/presentation/ui/widgets/widgets.dart';
+import 'package:food_delivery_app/presentation/ui/app_constants/image_paths.dart';
 
 class SetLocationScreen extends StatefulWidget {
   const SetLocationScreen({super.key});
@@ -12,6 +13,20 @@ class SetLocationScreen extends StatefulWidget {
 }
 
 class _SetLocationScreenState extends State<SetLocationScreen> {
+  Future<void> showSnackBar() async {
+    await Future.delayed(const Duration(microseconds: 200));
+    Get.snackbar('Feature Not Implemented Yet', "Please Move To Next Page ",
+        duration: const Duration(seconds: 3),
+        backgroundColor: Colors.white,
+        colorText: Colors.black);
+  }
+
+  @override
+  void initState() {
+    showSnackBar();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final myTheme = MediaQuery.of(context).platformBrightness;
@@ -27,26 +42,7 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    InkWell(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.only(
-                            top: 10, bottom: 10, right: 8, left: 18),
-                        decoration: BoxDecoration(
-                          color: myTheme == Brightness.light
-                              ? Colors.orange.shade50
-                              : Colors.brown.shade900,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: const Icon(
-                          Icons.arrow_back_ios,
-                          color: Colors.orange,
-                          size: 26,
-                        ),
-                      ),
-                    ),
+                    TopCornerGoBackButtonWidget(myTheme: myTheme),
                     const SizedBox(
                       height: 20,
                     ),
@@ -64,76 +60,86 @@ class _SetLocationScreenState extends State<SetLocationScreen> {
                     SizedBox(
                       height: Get.height * .07,
                     ),
-                    Container(
-                      height: 147,
-                      width: double.maxFinite,
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                height: 50,
-                                width: 40,
-                                decoration: const BoxDecoration(
-                                  color: Colors.yellow,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: const Icon(
-                                  CupertinoIcons.location_solid,
-                                  color: Colors.brown,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 18,
-                              ),
-                              Text(
-                                "Your Location",
-                                style: Theme.of(context).textTheme.titleSmall,
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          InkWell(
-                            onTap: () {},
-                            child: Card(
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 20),
-                                child: Center(
-                                  child: Text(
-                                    "Set Your Location",
-                                    style:
-                                        Theme.of(context).textTheme.titleSmall,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
+                    _yourLoaction(context),
                     SizedBox(height: Get.height * .40),
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: IconButton(
-                        onPressed: () {
-                          Get.toNamed('/congrats', arguments: [
-                            'Your Profile is Ready to Use',
-                            Image.asset(
-                              ImagePaths.tryOrderButton,
-                              fit: BoxFit.fill,
-                            ),
-                            'create',
-                          ]);
-                        },
-                        icon: Image.asset(ImagePaths.nextButton),
-                      ),
-                    ),
+                    _nextButton(),
                   ],
                 ),
               ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Align _nextButton() {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: IconButton(
+        onPressed: () {
+          Get.toNamed('/congrats', arguments: [
+            'Your Profile is Ready to Use',
+            Image.asset(
+              ImagePaths.tryOrderButton,
+              fit: BoxFit.fill,
+            ),
+            'create',
+          ]);
+        },
+        icon: Image.asset(ImagePaths.nextButton),
+      ),
+    );
+  }
+
+  SizedBox _yourLoaction(BuildContext context) {
+    return SizedBox(
+      height: 147,
+      width: double.maxFinite,
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                height: 50,
+                width: 40,
+                decoration: const BoxDecoration(
+                  color: Colors.yellow,
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(
+                  CupertinoIcons.location_solid,
+                  color: Colors.brown,
+                ),
+              ),
+              const SizedBox(
+                width: 18,
+              ),
+              Text(
+                "Your Location",
+                style: Theme.of(context).textTheme.titleSmall,
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          _setLocationSection(context)
+        ],
+      ),
+    );
+  }
+
+  InkWell _setLocationSection(BuildContext context) {
+    return InkWell(
+      onTap: () {},
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: Center(
+            child: Text(
+              "Set Your Location",
+              style: Theme.of(context).textTheme.titleSmall,
             ),
           ),
         ),
