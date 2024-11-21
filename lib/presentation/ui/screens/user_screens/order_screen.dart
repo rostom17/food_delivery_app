@@ -191,50 +191,54 @@ class _OrderScreenState extends State<OrderScreen> {
           ),
           child: Padding(
             padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
-            child: Column(
-              children: [
-                _categiricalPrice("Sub-total", 15.9),
-                _categiricalPrice("Discount", 1.0),
-                _categiricalPrice("Delivery Charge", 4.99),
-                const SizedBox(
-                  height: 15,
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: GetBuilder<OrderController>(
+              builder: (controller) {
+                return Column(
                   children: [
-                    Text(
-                      "Total",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold),
+                    _categiricalPrice("Sub-total", controller.getSubtotal),
+                    _categiricalPrice("Discount", controller.getDiscount),
+                    _categiricalPrice("Delivery Charge", controller.deliveryCharge),
+                    const SizedBox(
+                      height: 15,
                     ),
-                    Text(
-                      "150 \$",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text(
+                          "Total",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "${controller.getTotalPrice.toStringAsFixed(2)} \$",
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.greenAccent,
+                        fixedSize: const Size.fromWidth(double.maxFinite),
+                        elevation: 0,
+                      ),
+                      child: const Text(
+                        "Place Order",
+                        style: TextStyle(fontSize: 18),
+                      ),
                     ),
                   ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Place Order",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.greenAccent,
-                    fixedSize: const Size.fromWidth(double.maxFinite),
-                    elevation: 0,
-                  ),
-                ),
-              ],
+                );
+              }
             ),
           ),
         ),
