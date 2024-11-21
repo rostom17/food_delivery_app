@@ -18,3 +18,4 @@ export 'package:food_delivery_app/presentation/ui/screens/auth_screens/sign_up_s
 export 'package:food_delivery_app/presentation/ui/screens/splash_screen.dart';
 export 'package:food_delivery_app/presentation/ui/screens/featured_screen/resturants_screen.dart';
 export 'package:food_delivery_app/presentation/ui/screens/featured_screen/food_item_screen.dart';
+export 'package:food_delivery_app/presentation/ui/screens/user_screens/notification_screen.dart';

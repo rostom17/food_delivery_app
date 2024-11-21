@@ -146,7 +146,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         const Spacer(),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.toNamed('/notificationScreen');
+          },
           icon: const Badge(
             backgroundColor: Colors.red,
             label: Text("2"),

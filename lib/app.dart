@@ -31,6 +31,7 @@ class FoodNinja extends StatelessWidget {
         GetPage(name: '/bottomNavScreen', page: ()=> const BottomNavScreen()),
         GetPage(name: '/restaurantScreen', page: ()=> const RestaurantsScreen()),
         GetPage(name: '/foodItemScreen', page: ()=> FoodItemScreen()),
+        GetPage(name: '/notificationScreen', page: ()=> const NotificationScreen()),
       ],
 
       home: const SplashScreen(),

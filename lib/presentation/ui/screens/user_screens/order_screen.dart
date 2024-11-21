@@ -86,6 +86,7 @@ class _OrderScreenState extends State<OrderScreen> {
               ),
             ),
             child: Card(
+              margin: const EdgeInsets.symmetric(vertical: 12),
               child: Container(
                 height: 100,
                 decoration: BoxDecoration(
@@ -185,7 +186,7 @@ class _OrderScreenState extends State<OrderScreen> {
         child: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-                colors: [Colors.green, Colors.greenAccent],
+                colors: [Colors.grey, Colors.greenAccent],
                 begin: Alignment.bottomRight,
                 end: Alignment.topLeft),
           ),
@@ -227,13 +228,13 @@ class _OrderScreenState extends State<OrderScreen> {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
-                        foregroundColor: Colors.greenAccent,
+                        foregroundColor: Colors.green,
                         fixedSize: const Size.fromWidth(double.maxFinite),
                         elevation: 0,
                       ),
                       child: const Text(
                         "Place Order",
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
@@ -256,7 +257,7 @@ class _OrderScreenState extends State<OrderScreen> {
               color: Colors.white, fontSize: 22, fontWeight: FontWeight.w500),
         ),
         Text(
-          "$price \$",
+          "${price.toStringAsFixed(2)} \$",
           style: const TextStyle(
               color: Colors.white, fontSize: 22, fontWeight: FontWeight.w500),
         ),

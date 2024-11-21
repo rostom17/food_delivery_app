@@ -2,6 +2,8 @@
 TODO: Dummy Data can be replaced by API data
 */
 
+import 'package:flutter/material.dart';
+
 class DummyData {
   static const restaurantImages = [
     'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_700,h_400/http://assets.designhill.com/design-blog/wp-content/uploads/2021/11/34.png',
@@ -117,5 +119,27 @@ class DummyData {
       'imageLink':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2paowiODEqEOJ082fLEWgrlBjvBlGd2GrQ&s',
     },
+  ];
+
+  static const List<Map<String, dynamic>> notifications = [
+    {
+      'title' : "Your Order Has been Taken By Driver",
+      'time' : 'recentrly',
+      'icon' : Icons.car_crash,
+      'iconColor' : Colors.green
+    },
+    {
+      'title' : "Your Order Has been Cancelled",
+      'time' : '10.00 am',
+      'icon' : Icons.cancel,
+      'iconColor' : Colors.red,
+    },
+    {
+      'title' : "Congrats! You are a Gold Member Now",
+      'time' : 'recentrly',
+      'icon' : Icons.celebration,
+      'iconColor' : Colors.amber
+    },
+
   ];
 }
