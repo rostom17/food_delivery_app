@@ -13,7 +13,22 @@ class OrderScreen extends StatefulWidget {
 
 class _OrderScreenState extends State<OrderScreen> {
   final _orderController = Get.find<OrderController>();
-  
+
+  void quantityIncrement(int id) {
+    _orderController.incrementItemNumber(id);
+  }
+
+  void quantityDecrement(int id) {
+    _orderController.decrementItemNumber(id);
+  }
+
+  int qty(int id) {
+    int index =
+        _orderController.quantityCheck.indexWhere((e) => e.containsKey(id));
+    int x = _orderController.quantityCheck[index][id]!;
+    return x;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +39,7 @@ class _OrderScreenState extends State<OrderScreen> {
                   top: 50, left: 20, right: 20, bottom: 0),
               child: GetBuilder<OrderController>(builder: (controller) {
                 return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Order Details",
@@ -51,77 +67,107 @@ class _OrderScreenState extends State<OrderScreen> {
   List<Widget> orderCard(controller) {
     return controller.myOrderList
         .map<Widget>(
-          (item) => Card(
-            child: Container(
-              height: 100,
+          (item) => Dismissible(
+            key: Key(item['id'].toString()),
+            direction: DismissDirection.endToStart,
+            onDismissed: (direction) {
+              controller.removeFromOrderList(item['id']);
+            },
+            background: Container(
+              alignment: Alignment.centerRight,
+              padding: const EdgeInsets.symmetric(horizontal: 30),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(10),
               ),
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 75,
-                      width: 75,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: NetworkImage(
-                              item['imageLink'],
-                            ),
-                            fit: BoxFit.cover),
+              child: const Icon(
+                Icons.delete,
+                color: Colors.white,
+              ),
+            ),
+            child: Card(
+              child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                item['imageLink'],
+                              ),
+                              fit: BoxFit.cover),
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '${item['name']}',
-                          style: Theme.of(context).textTheme.titleMedium,
-                        ),
-                        const Text('Description'),
-                        Text(
-                          '${item['price']}',
-                          style: const TextStyle(
-                              color: Colors.greenAccent,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                    const Spacer(),
-                    Row(
-                      children: [
-                        IconButton.outlined(
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.greenAccent,
-                            foregroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '${item['name']}',
+                            style: Theme.of(context).textTheme.titleMedium,
                           ),
-                          onPressed: () {},
-                          icon: const Icon(Icons.add),
-                        ),
-                        const SizedBox(width: 5,),
-                        Text('1', style: Theme.of(context).textTheme.titleMedium,), 
-                        const SizedBox(width: 5,),
-                        IconButton.outlined(
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.greenAccent,
-                            foregroundColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10)),
+                          const Text('Description'),
+                          Text(
+                            '${item['price']}',
+                            style: const TextStyle(
+                                color: Colors.greenAccent,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
                           ),
-                          onPressed: () {},
-                          icon: const Icon(Icons.remove),
-                        ),
-                      ],
-                    )
-                  ],
+                        ],
+                      ),
+                      const Spacer(),
+                      Row(
+                        children: [
+                          IconButton.outlined(
+                            style: IconButton.styleFrom(
+                              backgroundColor: Colors.greenAccent,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                            ),
+                            onPressed: () {
+                              quantityIncrement(item['id']);
+                            },
+                            icon: const Icon(Icons.add),
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            qty(item['id']).toString(),
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          IconButton.outlined(
+                            style: IconButton.styleFrom(
+                              backgroundColor: Colors.greenAccent,
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                            ),
+                            onPressed: () {
+                              quantityDecrement(item['id']);
+                            },
+                            icon: const Icon(Icons.remove),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
