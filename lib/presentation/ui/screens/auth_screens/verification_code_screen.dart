@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 
-import 'package:food_delivery_app/presentation/ui/app_constants/image_paths.dart';
 import 'package:food_delivery_app/presentation/ui/widgets/background_pattern.dart';
 
 class VerificationCodeScreen extends StatefulWidget {
@@ -100,13 +99,21 @@ class _VerificationCodeScreenState extends State<VerificationCodeScreen> {
                               color: Colors.green),
                         )),
                   ),
-                  SizedBox(height: Get.height * .01,),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: ElevatedButton(onPressed: (){
-                      Get.toNamed('/resetPassword');
-                    }, child: const Text('Verify',style: TextStyle(fontSize: 24,),))
+                  SizedBox(
+                    height: Get.height * .01,
                   ),
+                  Align(
+                      alignment: Alignment.bottomCenter,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Get.toNamed('/resetPassword');
+                          },
+                          child: const Text(
+                            'Verify',
+                            style: TextStyle(
+                              fontSize: 24,
+                            ),
+                          ))),
                 ],
               ),
             ),

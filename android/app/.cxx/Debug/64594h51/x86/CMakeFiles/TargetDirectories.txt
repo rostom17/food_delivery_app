@@ -1,0 +1,2 @@
+D:/Flutter Apps/food_delivery_app/android/app/.cxx/Debug/64594h51/x86/CMakeFiles/edit_cache.dir
+D:/Flutter Apps/food_delivery_app/android/app/.cxx/Debug/64594h51/x86/CMakeFiles/rebuild_cache.dir

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/presentation/ui/app_constants/dummy_data.dart';
-import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -172,8 +171,9 @@ class ProfileScreen extends StatelessWidget {
                         children: [
                           IconButton(
                               onPressed: () {},
-                              icon: Icon(Icons.shopping_cart_checkout)),
-                          IconButton(onPressed: () {}, icon: Icon(Icons.delete))
+                              icon: const Icon(Icons.shopping_cart_checkout)),
+                          IconButton(
+                              onPressed: () {}, icon: const Icon(Icons.delete))
                         ],
                       )
                     ],
